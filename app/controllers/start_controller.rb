@@ -4,11 +4,12 @@ class StartController < ApplicationController
   end
 
   def index()
+    @title = "Hello Rails!:"
+    @header = "studyRails"
+    @footer = "junjun"
     if request.post?
-      @title = "Hello Rails!:"
       @msg = params[:input]
     else
-      @title = "Hello Rails!:"
       @msg = "Not POST"
     end
   end
